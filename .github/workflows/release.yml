@@ -14,11 +14,10 @@ jobs:
       - uses: actions/setup-go@v4
         with:
           go-version: 1.21
-      - name: Install tfplugindocs
+      - name: Download dependencies
         run: |
-          go install github.com/hashicorp/terraform-plugin-docs/cmd/tfplugindocs@latest
-          # Verify installation
-          tfplugindocs --version
+          go mod download
+          cd tools && go mod download
       - name: Import GPG key
         id: import_gpg
         uses: crazy-max/ghaction-import-gpg@v5
