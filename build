@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Run a container with your source mounted
+docker run -it --rm \
+  -v $(pwd):/workspace \
+  -w /workspace \
+  golang:1.21-alpine \
+  sh
+
+## Inside the container:
+# apk add --no-cache git make bash
+# make build
