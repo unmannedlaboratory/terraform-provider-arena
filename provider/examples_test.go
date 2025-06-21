@@ -8,7 +8,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/stretchr/testify/require"
 
-	"github.com/arena/terraform-provider-arena/provider"
+	"github.com/unmannedlaboratory/terraform-provider-arena/provider"
 )
 
 func TestExamples(t *testing.T) {

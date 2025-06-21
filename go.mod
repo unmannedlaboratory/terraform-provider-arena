@@ -1,4 +1,4 @@
-module github.com/arena/terraform-provider-arena
+module github.com/unmannedlaboratory/terraform-provider-arena
 
 go 1.20
 

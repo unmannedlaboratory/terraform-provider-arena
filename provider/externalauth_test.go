@@ -3,7 +3,7 @@ package provider_test
 import (
 	"testing"
 
-	"github.com/arena/terraform-provider-arena/provider"
+	"github.com/unmannedlaboratory/terraform-provider-arena/provider"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
