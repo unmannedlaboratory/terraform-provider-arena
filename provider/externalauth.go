@@ -45,5 +45,5 @@ func externalAuthDataSource() *schema.Resource {
 }
 
 func ExternalAuthAccessTokenEnvironmentVariable(id string) string {
-	return fmt.Sprintf("CODER_EXTERNAL_AUTH_ACCESS_TOKEN_%s", id)
+	return fmt.Sprintf("ARENA_EXTERNAL_AUTH_ACCESS_TOKEN_%s", id)
 }

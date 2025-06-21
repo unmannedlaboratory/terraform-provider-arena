@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     arena = {
-      source = "unmanned/arena"
+      source = "unmannedlaboratory/arena"
     }
   }
 }

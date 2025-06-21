@@ -152,7 +152,7 @@ func agentResource() *schema.Resource {
 			"token": {
 				ForceNew:    true,
 				Sensitive:   true,
-				Description: `Set the environment variable "CODER_AGENT_TOKEN" with this token to authenticate an agent.`,
+				Description: `Set the environment variable "ARENA_AGENT_TOKEN" with this token to authenticate an agent.`,
 				Type:        schema.TypeString,
 				Computed:    true,
 			},
@@ -363,7 +363,7 @@ func updateInitScript(resourceData *schema.ResourceData, i interface{}) diag.Dia
 	if err != nil {
 		return diag.Errorf("parse access url: %s", err)
 	}
-	script := os.Getenv(fmt.Sprintf("CODER_AGENT_SCRIPT_%s_%s", operatingSystem, arch))
+	script := os.Getenv(fmt.Sprintf("ARENA_AGENT_SCRIPT_%s_%s", operatingSystem, arch))
 	if script != "" {
 		script = strings.ReplaceAll(script, "${ACCESS_URL}", accessURL.String())
 		script = strings.ReplaceAll(script, "${AUTH_TYPE}", auth)

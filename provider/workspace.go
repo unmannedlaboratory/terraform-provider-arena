@@ -15,7 +15,7 @@ func workspaceDataSource() *schema.Resource {
 	return &schema.Resource{
 		Description: "Use this data source to get information for the active workspace build.",
 		ReadContext: func(c context.Context, rd *schema.ResourceData, i interface{}) diag.Diagnostics {
-			transition := os.Getenv("CODER_WORKSPACE_TRANSITION")
+			transition := os.Getenv("ARENA_WORKSPACE_TRANSITION")
 			if transition == "" {
 				// Default to start!
 				transition = "start"
@@ -27,49 +27,49 @@ func workspaceDataSource() *schema.Resource {
 			}
 			_ = rd.Set("start_count", count)
 
-			owner := os.Getenv("CODER_WORKSPACE_OWNER")
+			owner := os.Getenv("ARENA_WORKSPACE_OWNER")
 			if owner == "" {
 				owner = "default"
 			}
 			_ = rd.Set("owner", owner)
 
-			ownerEmail := os.Getenv("CODER_WORKSPACE_OWNER_EMAIL")
+			ownerEmail := os.Getenv("ARENA_WORKSPACE_OWNER_EMAIL")
 			_ = rd.Set("owner_email", ownerEmail)
 
-			ownerName := os.Getenv("CODER_WORKSPACE_OWNER_NAME")
+			ownerName := os.Getenv("ARENA_WORKSPACE_OWNER_NAME")
 			_ = rd.Set("owner_name", ownerName)
 
-			ownerID := os.Getenv("CODER_WORKSPACE_OWNER_ID")
+			ownerID := os.Getenv("ARENA_WORKSPACE_OWNER_ID")
 			if ownerID == "" {
 				ownerID = uuid.Nil.String()
 			}
 			_ = rd.Set("owner_id", ownerID)
 
-			ownerOIDCAccessToken := os.Getenv("CODER_WORKSPACE_OWNER_OIDC_ACCESS_TOKEN")
+			ownerOIDCAccessToken := os.Getenv("ARENA_WORKSPACE_OWNER_OIDC_ACCESS_TOKEN")
 			_ = rd.Set("owner_oidc_access_token", ownerOIDCAccessToken)
 
-			name := os.Getenv("CODER_WORKSPACE_NAME")
+			name := os.Getenv("ARENA_WORKSPACE_NAME")
 			if name == "" {
 				name = "default"
 			}
 			rd.Set("name", name)
 
-			sessionToken := os.Getenv("CODER_WORKSPACE_OWNER_SESSION_TOKEN")
+			sessionToken := os.Getenv("ARENA_WORKSPACE_OWNER_SESSION_TOKEN")
 			_ = rd.Set("owner_session_token", sessionToken)
 
-			id := os.Getenv("CODER_WORKSPACE_ID")
+			id := os.Getenv("ARENA_WORKSPACE_ID")
 			if id == "" {
 				id = uuid.NewString()
 			}
 			rd.SetId(id)
 
-			templateID := os.Getenv("CODER_WORKSPACE_TEMPLATE_ID")
+			templateID := os.Getenv("ARENA_WORKSPACE_TEMPLATE_ID")
 			_ = rd.Set("template_id", templateID)
 
-			templateName := os.Getenv("CODER_WORKSPACE_TEMPLATE_NAME")
+			templateName := os.Getenv("ARENA_WORKSPACE_TEMPLATE_NAME")
 			_ = rd.Set("template_name", templateName)
 
-			templateVersion := os.Getenv("CODER_WORKSPACE_TEMPLATE_VERSION")
+			templateVersion := os.Getenv("ARENA_WORKSPACE_TEMPLATE_VERSION")
 			_ = rd.Set("template_version", templateVersion)
 
 			config, valid := i.(config)

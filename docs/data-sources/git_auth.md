@@ -30,7 +30,7 @@ resource "arena_agent" "dev" {
   }
   startup_script = <<EOF
 if [ ! -d ~/arena ]; then
-    git clone https://github.com/unmanned/arena
+    git clone https://github.com/unmannedlaboratory/arena
 fi
 EOF
 }

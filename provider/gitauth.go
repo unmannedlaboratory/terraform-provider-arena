@@ -46,5 +46,5 @@ func gitAuthDataSource() *schema.Resource {
 }
 
 func GitAuthAccessTokenEnvironmentVariable(id string) string {
-	return fmt.Sprintf("CODER_GIT_AUTH_ACCESS_TOKEN_%s", id)
+	return fmt.Sprintf("ARENA_GIT_AUTH_ACCESS_TOKEN_%s", id)
 }

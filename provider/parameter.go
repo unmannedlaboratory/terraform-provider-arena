@@ -218,7 +218,7 @@ func parameterDataSource() *schema.Resource {
 			"icon": {
 				Type: schema.TypeString,
 				Description: "A URL to an icon that will display in the dashboard. View built-in " +
-					"icons here: https://github.com/unmanned/arena/tree/main/site/static/icon. Use a " +
+					"icons here: https://github.com/unmannedlaboratory/arena/tree/main/site/static/icon. Use a " +
 					"built-in icon with `data.arena_workspace.me.access_url + \"/icon/<path>\"`.",
 				ForceNew: true,
 				Optional: true,
@@ -260,7 +260,7 @@ func parameterDataSource() *schema.Resource {
 						"icon": {
 							Type: schema.TypeString,
 							Description: "A URL to an icon that will display in the dashboard. View built-in " +
-								"icons here: https://github.com/unmanned/arena/tree/main/site/static/icon. Use a " +
+								"icons here: https://github.com/unmannedlaboratory/arena/tree/main/site/static/icon. Use a " +
 								"built-in icon with `data.arena_workspace.me.access_url + \"/icon/<path>\"`.",
 							ForceNew: true,
 							Optional: true,
@@ -464,7 +464,7 @@ func (v *Validation) Valid(typ, value string) error {
 // can be used in parameter names that may not be valid in env vars.
 func ParameterEnvironmentVariable(name string) string {
 	sum := sha256.Sum256([]byte(name))
-	return "CODER_PARAMETER_" + hex.EncodeToString(sum[:])
+	return "ARENA_PARAMETER_" + hex.EncodeToString(sum[:])
 }
 
 func takeFirstError(errs ...error) error {

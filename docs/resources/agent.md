@@ -53,7 +53,7 @@ resource "kubernetes_pod" "dev" {
     container {
       command = ["sh", "-c", arena_agent.dev.init_script]
       env {
-        name  = "CODER_AGENT_TOKEN"
+        name  = "ARENA_AGENT_TOKEN"
         value = arena_agent.dev.token
       }
     }
@@ -91,7 +91,7 @@ resource "kubernetes_pod" "dev" {
 
 - `id` (String) The ID of this resource.
 - `init_script` (String) Run this script on startup of an instance to initialize the agent.
-- `token` (String, Sensitive) Set the environment variable "CODER_AGENT_TOKEN" with this token to authenticate an agent.
+- `token` (String, Sensitive) Set the environment variable "ARENA_AGENT_TOKEN" with this token to authenticate an agent.
 
 <a id="nestedblock--display_apps"></a>
 ### Nested Schema for `display_apps`

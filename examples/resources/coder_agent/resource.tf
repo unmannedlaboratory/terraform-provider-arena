@@ -38,7 +38,7 @@ resource "kubernetes_pod" "dev" {
     container {
       command = ["sh", "-c", arena_agent.dev.init_script]
       env {
-        name  = "CODER_AGENT_TOKEN"
+        name  = "ARENA_AGENT_TOKEN"
         value = arena_agent.dev.token
       }
     }

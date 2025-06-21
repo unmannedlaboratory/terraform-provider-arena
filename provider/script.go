@@ -57,7 +57,7 @@ func scriptResource() *schema.Resource {
 				ForceNew: true,
 				Optional: true,
 				Description: "A URL to an icon that will display in the dashboard. View built-in " +
-					"icons here: https://github.com/unmanned/arena/tree/main/site/static/icon. Use a " +
+					"icons here: https://github.com/unmannedlaboratory/arena/tree/main/site/static/icon. Use a " +
 					"built-in icon with `data.arena_workspace.me.access_url + \"/icon/<path>\"`.",
 			},
 			"script": {

@@ -25,7 +25,7 @@ Use this data source to configure editable options for workspaces.
 - `description` (String) Describe what this parameter does.
 - `display_name` (String) The displayed name of the parameter as it will appear in the interface.
 - `ephemeral` (Boolean) The value of an ephemeral parameter will not be preserved between consecutive workspace builds.
-- `icon` (String) A URL to an icon that will display in the dashboard. View built-in icons here: https://github.com/unmanned/arena/tree/main/site/static/icon. Use a built-in icon with `data.arena_workspace.me.access_url + "/icon/<path>"`.
+- `icon` (String) A URL to an icon that will display in the dashboard. View built-in icons here: https://github.com/unmannedlaboratory/arena/tree/main/site/static/icon. Use a built-in icon with `data.arena_workspace.me.access_url + "/icon/<path>"`.
 - `mutable` (Boolean) Whether this value can be changed after workspace creation. This can be destructive for values like region, so use with caution!
 - `option` (Block List, Max: 64) Each "option" block defines a value for a user to select from. (see [below for nested schema](#nestedblock--option))
 - `order` (Number) The order determines the position of a template parameter in the UI/CLI presentation. The lowest order is shown first and parameters with equal order are sorted by name (ascending order).
@@ -49,7 +49,7 @@ Required:
 Optional:
 
 - `description` (String) Describe what selecting this value does.
-- `icon` (String) A URL to an icon that will display in the dashboard. View built-in icons here: https://github.com/unmanned/arena/tree/main/site/static/icon. Use a built-in icon with `data.arena_workspace.me.access_url + "/icon/<path>"`.
+- `icon` (String) A URL to an icon that will display in the dashboard. View built-in icons here: https://github.com/unmannedlaboratory/arena/tree/main/site/static/icon. Use a built-in icon with `data.arena_workspace.me.access_url + "/icon/<path>"`.
 
 
 <a id="nestedblock--validation"></a>

@@ -12,13 +12,13 @@ import (
 )
 
 func TestWorkspace(t *testing.T) {
-	t.Setenv("CODER_WORKSPACE_OWNER", "owner123")
-	t.Setenv("CODER_WORKSPACE_OWNER_NAME", "Mr Owner")
-	t.Setenv("CODER_WORKSPACE_OWNER_EMAIL", "owner123@example.com")
-	t.Setenv("CODER_WORKSPACE_OWNER_SESSION_TOKEN", "abc123")
-	t.Setenv("CODER_WORKSPACE_TEMPLATE_ID", "templateID")
-	t.Setenv("CODER_WORKSPACE_TEMPLATE_NAME", "template123")
-	t.Setenv("CODER_WORKSPACE_TEMPLATE_VERSION", "v1.2.3")
+	t.Setenv("ARENA_WORKSPACE_OWNER", "owner123")
+	t.Setenv("ARENA_WORKSPACE_OWNER_NAME", "Mr Owner")
+	t.Setenv("ARENA_WORKSPACE_OWNER_EMAIL", "owner123@example.com")
+	t.Setenv("ARENA_WORKSPACE_OWNER_SESSION_TOKEN", "abc123")
+	t.Setenv("ARENA_WORKSPACE_TEMPLATE_ID", "templateID")
+	t.Setenv("ARENA_WORKSPACE_TEMPLATE_NAME", "template123")
+	t.Setenv("ARENA_WORKSPACE_TEMPLATE_VERSION", "v1.2.3")
 
 	resource.Test(t, resource.TestCase{
 		Providers: map[string]*schema.Provider{
